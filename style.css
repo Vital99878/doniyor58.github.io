@@ -1,0 +1,290 @@
+body, button {
+    font-family: 'Roboto Slab', 'Times New Roman', serif;
+}
+.container {
+    max-width: 1280px;
+    height: 100%;
+    border-radius: 4px;
+    margin: 0 auto;
+    background: #faf8f5;
+    box-shadow: 0 1.5px 10px 0 rgba(1, 0, 42, .05);
+}
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+
+}
+header {
+    background: white;
+    height: 80px;
+    box-shadow: 0 1.5px 10px 0 rgba(1, 0, 42, .05);
+    position: relative;
+}
+.logo {
+    text-align: center;
+    padding-top: 28px;
+    font-size: 1.5rem;
+}
+.git {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+}
+.git:hover {
+    border-left: 1px solid #f5f4f2;
+    cursor: pointer;
+    box-shadow: 0 1.5px 10px 0 rgba(1, 0, 42, .05);
+}
+.giticon {
+    display: block;
+    background: url(git.png) no-repeat center;
+    width: 102px;
+    height: 78px;
+    box-sizing: border-box;
+}
+.giticon:hover {
+    opacity: 0.7;
+}
+.logo span {
+    color: #329a8e;
+}
+.logo h1:hover {
+    cursor: pointer;
+    display: inline;
+}
+.data {
+    margin-right: 10%;
+}
+.inp {
+    margin-top: 15px;
+    height: 35px;
+    width: 250px;
+    border-radius: 2.5px;
+    background-color: #fff;
+    box-shadow: 0 2.5px 10px 0 rgba(1, 0, 42, .1);
+    border: none;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #000;
+}
+.check-info {
+    width: 350px;
+    height: 95px;
+    box-sizing: border-box;
+    padding: 10px;
+    box-shadow: 0 2.5px 10px 0 rgba(1, 0, 42, .1);
+    margin: 15px 0px;
+    line-height: 1.2rem;
+    background: white;
+    display: none;
+}
+
+@keyframes animation_show {
+    0% {
+        opacity: 0;
+
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+.table {
+    display: table;
+}
+.show {
+    animation: animation_show 550ms;
+}
+.hide {
+    display: none;
+}
+.error {
+    margin-top: 15px;
+}
+button {
+    display: block;
+    width: 100px;
+    height: 35px;
+    background: #306b52;
+    ;
+    color: white;
+    border-radius: 3px;
+    border: none;
+}
+button:hover {
+    cursor: pointer;
+    opacity: 0.95;
+}
+label.hover-question {
+    width: 200px;
+    display: inline-block;
+}
+.question {
+    margin-left: 10px;
+    font-size: 1rem;
+    color: rgb(40, 21, 121);
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    text-align: center;
+    vertical-align: sup;
+    display: none;
+
+}
+.question::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    border: 8px solid transparent;
+    border-top: 8px solid #347270;
+    display: none;
+}
+.question::after {
+    content: 'Ежемесячные выплаты по кредиту для заемщика одинаковые в течение всего срока кредитования независимо от оставшейся суммы задолженности.';
+    position: absolute;
+    bottom: 36px;
+    width: 300px;
+    height: 108px;
+    left: -140px;
+    background-image: linear-gradient(336deg, #2e6640, #347270);
+    border-radius: 3px;
+    box-shadow: 2px 0px 7px 0px #306b52;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    box-sizing: border-box;
+    display: none;
+}
+.questionDif:before {
+    border: 8px solid transparent;
+    border-bottom: 8px solid #347270;
+    top: 15px;
+}
+.questionDif:after {
+    top: 30px;
+    content: 'Eжемесячно выплачивается равными долями тело кредита, а также проценты, начисленные на остаток основного долга.';
+    height: 80px;
+    background-image: linear-gradient(336deg,#347270, #2e6640);
+}
+label.hover-question:hover .question {
+    position: absolute;
+    display: inline-block;
+}
+label.hover-question:hover .question:hover::before {
+    display: block;
+}
+label.hover-question:hover .question:hover::after {
+   display: block; 
+}
+.check {
+    margin: 20px 0px;
+}
+
+.chek-bottom {
+    margin-bottom: 10px;
+}
+
+.chek-bottom label:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+input[type="radio"] {
+    border-radius: 100%;
+}
+input[type="radio"]:checked:before {
+    content: "";
+    display: block;
+    background: rgb(59, 49, 202);
+    border-radius: 100%;
+    width: 8px;
+    height: 8px;
+    margin: 2px;
+    pointer-events: none;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    border: 1px solid rgba(0, 0, 0, .3);
+    outline: none;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.tableContainter {
+    min-height: 580px;
+    margin: 50px auto;
+}
+table {
+    min-width: 90%;
+    margin: 0 auto;
+}
+tbody tr:nth-child(2n) {
+    background: lightgrey;
+}
+thead{
+    background-image: linear-gradient(336deg, #2e6640, #347270);
+    color: #fff;
+}
+td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+}
+
+p.center {
+    font-size: 1.25rem;
+    display: table;
+    margin: 33px auto;
+    color: #306b52;
+}
+
+p.center:hover {
+    cursor: pointer;
+    border-bottom: dashed 1px #306b52;
+}
+
+
+@media (max-width: 1010px) {
+    table td {
+        padding: 5px;
+    }
+}
+@media (max-width: 690px) {
+    table td {
+        padding: 3px;
+    }
+}
+@media (max-width: 590px) {
+    .inp {
+        width: auto;
+    }
+    table {
+        min-width: 100%;
+        font-size: 0.78rem;
+    }
+    table td {
+        padding: 2px;
+    }
+    table tbody td:last-child {
+        padding: 0px;
+        font-size: 0.7rem;
+    }
+}

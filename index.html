@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap&subset=cyrillic"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header class="header">
+            <div class="logo">
+                <h1><span>Credit</span>Calculator</h1>
+                <div class="git">
+                    <a href="https://github.com/Doniyor58" class="giticon"></a>
+                </div>
+            </div>
+        </header>
+
+        <div class="main">
+
+            <div class="data">
+                <p>Сумма кредита</p>
+                <input type="number" placeholder="800 000" class="inp" id="creditSum">
+                <p>Процентная ставка</p>
+                <input type="number" placeholder="11.5" class="inp" id="creditProcent" maxlength="4">
+                <p>Количество месяцев</p>
+                <input type="number" placeholder="60" class="inp" id="creditTime">
+                <p>Вид ежемесячного платежа</p>
+
+                <div class="check">
+
+                    <div class="chek-bottom">
+                        <input type='radio' id='annuit' name='radio' checked>
+                        <label for='annuit' class='hover-question'>аннуитетный <span class='question'>?</span></label>
+
+                    </div>
+
+                    <div class="chek-bottom"> <input type='radio' id='differ' name='radio'>
+                        <label for='differ' class='hover-question'>дифференцированный <span
+                                class='question questionDif'>?</span></label>
+
+                    </div>
+
+                </div>
+
+                <button>Рассчитать</button>
+                <p class="error hide">Пожалуйста, введите корректные данные</p>
+            </div>
+
+            <div class="result">
+                <p class="">Ежемесячные платёж</p>
+                <input type="text" class="inp monthPay" disabled>
+                <p>Общая сумма платежа</p>
+                <input type="text" class="inp totalSum" disabled>
+                <p>Сумма переплаты</p>
+                <input type="text" class="inp overPaymant" disabled>
+                <p>Переплата в процентах</p>
+                <input type="text" class="inp overPaymantInProcent" disabled>
+            </div>
+
+        </div>
+
+
+        <div class="tableContainter">
+            <table>
+                <thead>
+                    <tr>
+                        <td>#</td>
+                        <td>Дата</td>
+                        <td>Сумма</td>
+                        <td>Основной долг</td>
+                        <td>Выплата процентов</td>
+                        <td>Остаток</td>
+                        <td>Описание</td>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div> 
+    <script src='script.js'></script>
+</body>
+
+</html>
