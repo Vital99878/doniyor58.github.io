@@ -275,6 +275,9 @@ p.center:hover {
 }
 
 @media (max-width: 590px) {
+    html {
+        font-size: 0.9rem;
+    }
     .giticon {
         width: 70px;
     }
@@ -308,10 +311,9 @@ p.center:hover {
         margin-bottom: 10px;
     }
 }
+
+
 @media (max-width: 370px) {
-    html {
-        font-size: 0.9rem;
-    }
     .logo {
         padding-top: 30px;
         font-size: 1.3rem;
@@ -328,6 +330,12 @@ p.center:hover {
     .select-type {
         margin-top: 60px;
         margin-bottom: 10px;
+    }
+    table {
+        font-size: 0.65rem;
+    }
+    table tbody td:last-child {
+        font-size: 0.6rem;
     }
     table td {
         padding: 1px;
