@@ -20,10 +20,38 @@ const creditSum = document.getElementById('creditSum'),
 
   containerTable = document.querySelector('.tableContainter'),
   table = document.getElementsByTagName('table')[0],
-  tbody = document.getElementsByTagName('tbody')[0];
+  tbody = document.getElementsByTagName('tbody')[0],
+  mem = document.querySelector('.mem');
+ 
+console.log(creditTime);
 
-let contains;
-let showAll = document.createElement('p');
+let contains,
+    showAll = document.createElement('p'),
+    runMem = true;
+
+
+function maxlength(e, n) {
+      if (e.keyCode == 8 || e.keyCode == 9) {
+        return true;
+      }
+      if (this.value.length > 2 ) {
+        e.preventDefault();
+      }
+    }
+
+    creditProcent.addEventListener('keydown', maxlength);
+    creditTime.addEventListener('keydown', maxlength);
+
+//mem show
+creditProcent.addEventListener('blur', function() {
+  if (runMem && creditProcent.value > 99 ) {
+    mem.classList.toggle('showMem');
+    setTimeout(function() {
+      mem.classList.toggle('showMem');
+    },1000)
+    runMem = false;
+  }
+});
 
 // thank you, MDN
 (function () {
@@ -198,7 +226,6 @@ function showCalculateInTable(arrTotalPayInMoth, arrPayToDebt, arrPayToProcent, 
       showAll.innerText = 'Показать всё';
 
       containerTable.appendChild(showAll);
-      console.log(showAll);
     }
   }
 };
