@@ -171,7 +171,7 @@ function showCalculateInTable(arrTotalPayInMoth, arrPayToDebt, arrPayToProcent, 
     let nextMonth = () => {
       let x = findDate(i + 1),
         z = x.split('.');
-      return (z[1] != '01') ? `Ежемесечный платёж за ${z[1]}/${z[2]}` : `Ежемесечный платёж за ${z[1]}/${Number(z[2])+1}`
+      return (z[1] != '01') ? `Платёж за ${z[1]}/${z[2]}` : `Платёж за ${z[1]}/${Number(z[2])+1}`
     }
     tdDescription.innerHTML = nextMonth(i);
 

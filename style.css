@@ -267,14 +267,25 @@ p.center:hover {
         padding: 5px;
     }
 }
+
 @media (max-width: 690px) {
     table td {
         padding: 3px;
     }
 }
+
 @media (max-width: 590px) {
+    .giticon {
+        width: 70px;
+    }
     .inp {
-        width: auto;
+        width: 150px;
+    }
+    .data {
+        margin-left: 5px;
+    }
+    .result {
+        margin-right: 5px;
     }
     table {
         min-width: 100%;
@@ -286,5 +297,39 @@ p.center:hover {
     table tbody td:last-child {
         padding: 0px;
         font-size: 0.7rem;
+    }
+    label.hover-question {
+        width: 220px;
+        position: absolute;
+        margin-left: 5px;
+    }
+    .select-type {
+        margin-top: 60px;
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 370px) {
+    html {
+        font-size: 0.9rem;
+    }
+    .logo {
+        padding-top: 30px;
+        font-size: 1.3rem;
+    }
+
+    .inp {
+        width: 120px;
+    }
+    label.hover-question {
+        width: 220px;
+        position: absolute;
+        margin-left: 5px;
+    }
+    .select-type {
+        margin-top: 60px;
+        margin-bottom: 10px;
+    }
+    table td {
+        padding: 1px;
     }
 }
